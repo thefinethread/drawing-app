@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    height: 100dvh;
+    width: 100dvw;
+    font-family: 'Muli', sans-serif;
+    background-color: lightseagreen;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    gap: 10px;
+}
+
+.tools-bar {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+.tools-bar div {
+    padding-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.tools-bar ul li {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.tools-bar ul li:hover {
+    color: lightseagreen;
+}
+
+.tools-bar ul li {
+    padding-bottom: 10px;
+    font-size: 0.86rem;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.tools-bar ul li:is(:hover, .active) {
+    color: lightseagreen;
+}
+
+.tools-bar p {
+    display: inline-block;
+}
+
+.tools-bar input[type='range'] {
+    margin-top: 5px;
+    height: 4px;
+}
+
+/* colors */
+
+.row-3 .colors {
+    gap: 10px;
+}
+.row-3 li {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: #111;
+    position: relative;
+}
+
+.row-3 li:nth-of-type(2) {
+    background-color: #e02020;
+}
+.row-3 li:nth-of-type(3) {
+    background-color: #4a98f7;
+}
+.row-3 li:nth-of-type(4) {
+    background-color: #6dd400;
+}
+.row-3 li:nth-of-type(5) {
+    background-color: plum;
+}
+
+.row-3 li:hover::after {
+    position: absolute;
+    content: '';
+    height: 9px;
+    width: 9px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: inherit;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.colors #color-picker {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    transform: translateY(5px);
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* buttons */
+
+.btns {
+    width: 100%;
+}
+
+.btns button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.btns button:active {
+    scale: 0.98;
+}
+
+.btns #clear-canvas {
+    background: none;
+    border: 1px solid lightseagreen;
+    color: lightseagreen;
+}
+.btns #save-canvas {
+    background: lightseagreen;
+    border: 1px solid lightseagreen;
+    color: #fff;
+}
+
+/* canvas */
+.drawing-pad {
+    background-color: #fff;
+    flex: 1;
+    height: 448px;
+    border-radius: 8px;
+}

@@ -4,7 +4,82 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+            integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
         <title>Drawing App</title>
     </head>
-    <body></body>
+    <body>
+        <div class="container flex">
+            <section class="tools-bar flex">
+                <ul class="row row-1">
+                    <div>Shapes</div>
+                    <li>
+                        <i class="ri-rectangle-line"></i>
+                        <p>Rectangle</p>
+                    </li>
+                    <li>
+                        <i class="ri-circle-line"></i>
+                        <p>Circle</p>
+                    </li>
+                    <li>
+                        <i class="ri-triangle-line"></i>
+                        <p>Triangle</p>
+                    </li>
+                    <li class="flex">
+                        <input type="checkbox" id="fill-color" />
+                        <label for="fill-color">Fill color</label>
+                    </li>
+                </ul>
+                <ul class="row row-2">
+                    <div>Options</div>
+                    <li class="active">
+                        <i class="ri-brush-line"></i>
+                        <p>Brush</p>
+                    </li>
+                    <li>
+                        <i class="ri-eraser-line"></i>
+                        <p>Eraser</p>
+                    </li>
+                    <li>
+                        <input
+                            min="1"
+                            max="100"
+                            type="range"
+                            step="1"
+                            value="1"
+                            id="size-range"
+                        />
+                    </li>
+                </ul>
+                <ul class="row row-3">
+                    <div>Colors</div>
+                    <div class="colors flex">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li>
+                            <input type="color" id="color-picker" />
+                        </li>
+                    </div>
+                </ul>
+                <ul class="btns">
+                    <li>
+                        <button id="clear-canvas">Clear Canvas</button>
+                    </li>
+                    <li>
+                        <button id="save-canvas">Save As Image</button>
+                    </li>
+                </ul>
+            </section>
+            <section class="drawing-pad">
+                <canvas id="canvas"></canvas>
+            </section>
+        </div>
+    </body>
 </html>
