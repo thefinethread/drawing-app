@@ -23,6 +23,7 @@ body {
     background-color: lightseagreen;
     padding: 20px;
     font-size: 1rem;
+    overflow: hidden;
 }
 
 .container {
@@ -52,6 +53,11 @@ body {
     justify-content: start;
     align-items: center;
     gap: 10px;
+}
+
+.tools-bar ul li:nth-of-type(3) {
+    padding-left: 6px;
+    gap: 15px;
 }
 
 .tools-bar ul li:hover {
@@ -86,7 +92,7 @@ body {
     height: 18px;
     width: 18px;
     border-radius: 50%;
-    background-color: #111;
+    background-color: #111111;
     position: relative;
 }
 
@@ -100,10 +106,10 @@ body {
     background-color: #6dd400;
 }
 .row-3 li:nth-of-type(5) {
-    background-color: plum;
+    background-color: #dda0dd;
 }
 
-.row-3 li:hover::after {
+.row-3 li:is(:hover, .selected)::after {
     position: absolute;
     content: '';
     height: 9px;
@@ -161,4 +167,9 @@ body {
     flex: 1;
     height: 448px;
     border-radius: 8px;
+}
+
+.drawing-pad #canvas {
+    height: 100%;
+    width: 100%;
 }

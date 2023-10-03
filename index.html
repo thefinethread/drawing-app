@@ -11,6 +11,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <script defer src="script.js"></script>
         <title>Drawing App</title>
     </head>
     <body>
@@ -18,17 +19,17 @@
             <section class="tools-bar flex">
                 <ul class="row row-1">
                     <div>Shapes</div>
-                    <li>
+                    <li class="shape">
                         <i class="ri-rectangle-line"></i>
                         <p>Rectangle</p>
                     </li>
-                    <li>
+                    <li class="shape">
                         <i class="ri-circle-line"></i>
                         <p>Circle</p>
                     </li>
-                    <li>
-                        <i class="ri-triangle-line"></i>
-                        <p>Triangle</p>
+                    <li class="shape">
+                        <span> / </span>
+                        <p>Line</p>
                     </li>
                     <li class="flex">
                         <input type="checkbox" id="fill-color" />
@@ -48,7 +49,7 @@
                     <li>
                         <input
                             min="1"
-                            max="100"
+                            max="10"
                             type="range"
                             step="1"
                             value="1"
@@ -59,12 +60,16 @@
                 <ul class="row row-3">
                     <div>Colors</div>
                     <div class="colors flex">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li>
-                            <input type="color" id="color-picker" />
+                        <li class="color selected" data-color="#111111"></li>
+                        <li class="color" data-color="#e02020"></li>
+                        <li class="color" data-color="#4a98f7"></li>
+                        <li class="color" data-color="#6dd400"></li>
+                        <li class="color" data-color="#dda0dd">
+                            <input
+                                type="color"
+                                id="color-picker"
+                                value="#dda0dd"
+                            />
                         </li>
                     </div>
                 </ul>
