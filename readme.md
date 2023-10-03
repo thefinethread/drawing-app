@@ -4,7 +4,7 @@ This is a simple drawing app created using HTML5 Canvas and Vanilla JavaScript. 
 
 ## Features
 
--   **Drawing:** Use your mouse or touch input to draw on the canvas.
+-   **Drawing:** Use your mouse input to draw on the canvas.
 
 -   **Brush Customization:** You can select the brush size and color that suits your artistic needs.
 
@@ -12,7 +12,7 @@ This is a simple drawing app created using HTML5 Canvas and Vanilla JavaScript. 
 
 ## To-Do for Future Development
 
--   **Responsive Design:** Make the app responsive to different screen sizes, especially for mobile devices.
+-   **Responsive Design:** Make the app responsive to different screen sizes, especially for mobile devices and make the canvas respond to touch events.
 
 -   **Shapes:** Implement drawing shapes such as lines, rectangles, and circles, with the ability to fill them with color.
 
